@@ -1,3 +1,5 @@
 ^TestRpackage\.Rproj$
 ^\.Rproj\.user$
 ^LICENSE\.md$
+^Draft\.R$
+^README\.Rmd$

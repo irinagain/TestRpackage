@@ -1,0 +1,32 @@
+---
+title: "Introduction to my package"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{This is the title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Introduction
+
+This package implements soft-thresholding function, which is defined for any scalar $x$ and any non-negative number $a$ as 
+$$
+S(x, a) = sign(x)\max(|x|-a, 0).
+$$
+First, we will attach the package to access its functions.
+
+```{r setup}
+library(TestRpackage)
+```
+
+Next, we will apply function soft to $x=3$ at value $a=2$, which should return 1.
+```{r example1, echo = FALSE}
+soft(3, 2)
+```
